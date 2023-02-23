@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #111;
+    color: white;
+    padding: 20px 50px;
+}
+
+.navTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.search > .searchIcon {
+    margin-left: 5px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.searchInput::placeholder {
+    color: lightgray;
+}
+
+.limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+}
+
+.navBottom {
+    display: flex;
+    justify-content: center;
+}
+
+.menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 400;
+}
+
+.slider {
+    background: url("https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 78% 100%, 0 90%);
+    overflow: hidden;
+}
+
+.sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+}
+
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: yellow;
+}
+
+.sliderImg {
+    z-index: 1;
+}
+
+.sliderTitle {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.sliderPrice {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 100;
+    color: lightgray;
+    border: 1px solid gray;
+    z-index: 1;
+}
+.buyButton {
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    font-size: 35px;
+    font-weight: 900;
+    color: lightgray;
+    background-color: #111;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.buyButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.sliderItem:nth-child(1) .sliderBg {
+    background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg {
+    background-color: rebeccapurple;
+}
+.sliderItem:nth-child(3) .sliderBg {
+    background-color: teal;
+}
+.sliderItem:nth-child(4) .sliderBg {
+    background-color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderBg {
+    background-color: rgb(124, 115, 80);
+}
+
+.sliderItem:nth-child(1) .sliderPrice {
+    color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderPrice {
+    color: white;
+}
+.sliderItem:nth-child(3) .sliderPrice {
+    color: teal;
+}
+.sliderItem:nth-child(4) .sliderPrice {
+    color: cornflowerblue;
+}
+.sliderItem:nth-child(5) .sliderPrice {
+    color: cornsilk;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.featureIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 50px;
+}
+
+.product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.productImg {
+    width: 50%;
+}
+
+.productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+}
+
+.productTitle {
+    font-size: 75px;
+    font-weight: 900;
+}
+
+.productDesc {
+    font-style: 24px;
+    color: gray;
+}
+
+.colors, .sizes {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.color:last-child {
+    background-color: darkblue;
+}
+
+.size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.productButton {
+    padding: 10px 20px;
+    float: right;
+    background: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.productButton:hover {
+    background-color: white;
+    color: black;
+}
+/* 48/00m */
